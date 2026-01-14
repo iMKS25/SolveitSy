@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إرسال المشكلة</title>
+
+    <!-- خط عربي -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>إرسال المشكلة التقنية</h1>
+
+        <form>
+            <label>الاسم</label>
+            <input type="text" class="input-field" placeholder="اكتب اسمك">
+
+            <label>رقم الموبايل / واتساب</label>
+            <input type="text" class="input-field" placeholder="مثال: 09XXXXXXXX">
+
+            <label>نوع المشكلة</label>
+            <select class="input-field">
+                <option>موبايل</option>
+                <option>كمبيوتر</option>
+                <option>برامج</option>
+            </select>
+
+            <label>وصف المشكلة</label>
+            <textarea class="input-field" placeholder="اشرح المشكلة بالتفصيل"></textarea>
+
+            <label>صورة (اختياري)</label>
+            <input type="file" class="input-field">
+
+            <button type="button" class="send-btn" onclick="sendProblem()">
+                إرسال المشكلة
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function sendProblem() {
+            let name = document.querySelector('input[placeholder="اكتب اسمك"]').value;
+            let phone = document.querySelector('input[placeholder="مثال: 09XXXXXXXX"]').value;
+            let type = document.querySelector('select').value;
+            let description = document.querySelector('textarea').value;
+
+            let message =
+                "طلب حل مشكلة تقنية:%0A" +
+                "الاسم: " + name + "%0A" +
+                "الرقم: " + phone + "%0A" +
+                "نوع المشكلة: " + type + "%0A" +
+                "الوصف: " + description;
+
+            let whatsappNumber = "963955213323"; // رقمك بدون +
+            let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Cairo', Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* الكرت */
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+/* النص */
+p {
+    color: #334155;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* توسيط زر الرئيسية */
+.center-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* زر الصفحة الرئيسية */
+.main-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #1d4ed8;
+}
+
+/* labels */
+label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* الحقول الموحدة */
+.input-field {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    transition: 0.25s;
+    font-family: 'Cairo', Arial, sans-serif;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+/* توحيد شكل select */
+select.input-field {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath fill='%236b7280' d='M5 7l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 14px center;
+    background-size: 14px;
+    padding-left: 40px;
+}
+
+/* زر الإرسال */
+.send-btn {
+    width: 100%;
+    margin-top: 35px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.send-btn:active {
+    transform: scale(0.98);
+}
